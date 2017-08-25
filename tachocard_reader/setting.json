@@ -1,0 +1,7 @@
+{
+	"Server": "localhost",
+	"Port": "61613",
+	"Queue": "ddd_client_files",
+	"UploadDir": "/Users/igorkuznetsov/Downloads/TCReaderUpload",
+	"Log": "./logs/tcreader.log"
+}
