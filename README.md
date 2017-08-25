@@ -1,4 +1,4 @@
-# Working with tachograph card wiht Go examples 
+# Working with tachograph card with Go examples 
 
 Repo includes example app for reading tachograph card and parse result ddd file.
 
