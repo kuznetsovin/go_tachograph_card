@@ -9,6 +9,7 @@ import (
 	"net"
 	"os"
 	"path/filepath"
+    "errors"
 )
 
 func SendDddToQueue(login string, pwd string, ddd *[]byte, uploadFileName string) error {

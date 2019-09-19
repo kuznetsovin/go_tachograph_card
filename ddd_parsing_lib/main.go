@@ -18,21 +18,21 @@ func parseDDDHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	card := &Card{}
+	c := &card{}
 
 	//разбираем пришедший ddd файл
-	if err = card.ParseFromDDD(ddd); err != nil {
+	if err = c.ParseFromDDD(ddd); err != nil {
 		log.Printf("DDD pasre error: %v", err)
 	}
 
-	ddd_json, err := card.ExportToJson()
+	ddd_json, err := c.ExportToJson()
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
 	w.Header().Set("Content-Type", "application/json")
-	w.Write(ddd_json)
+	w.Write([]byte(ddd_json))
 }
 
 func main() {

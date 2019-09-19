@@ -219,7 +219,7 @@ func (c *card) ParseFromDDD(ddd []byte) error {
 }
 
 // метод для экспорта объекта ddd
-func (c *card) ExportToJsonStr() (string, error) {
+func (c *card) ExportToJson() (string, error) {
 	ddd_json, err := json.Marshal(c)
 
 	return string(ddd_json), err
